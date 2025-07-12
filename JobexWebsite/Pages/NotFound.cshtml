@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Page Not Found";
+}
+
+<section class="view" style="background: url('@Href("~/wwwroot/img/others/banner.jpg")') center; height: 600px;">
+        <div class="mask flex-center rgba-black-strong">
+            <div class="flex-center flex-column text-white text-center">
+                <i class="fa fa-exclamation-circle fa-5x pb-3" aria-hidden="true"></i>
+                <h1 class="animated fadeIn mb-4 font-weight-bold">@Helpers.Content.ErrorInfo.Error404.Title</h1>
+                <h5 class="animated fadeIn mb-3">@Helpers.Content.ErrorInfo.Error404.Description</h5>
+                <a href="~/" class="animated fadeIn blue-text">Go back to home page.</a>
+            </div>
+        </div>
+</section>

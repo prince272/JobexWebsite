@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Services";
+
+    var NavLinks = new Dictionary<string, string>();
+    NavLinks.Add("Home", "~/");
+    NavLinks.Add(Page.Title, "~/Pages/Services");
+}
+
+@RenderPage("~/Shared/_HalfBannerPartial.cshtml", new { Title = "Our Services", NavLinks = NavLinks })
+
+@RenderPage("~/Shared/_ServicesPartial.cshtml")

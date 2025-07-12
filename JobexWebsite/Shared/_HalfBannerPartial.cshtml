@@ -1,0 +1,40 @@
+﻿<section id="banner">
+
+    <div class="view" style="background: url('@Href("~/wwwroot/img/others/banner.jpg")') center; min-height: 300px;">
+
+        <div class="mask flex-center rgba-black-strong">
+
+            <div class="container">
+
+                <h2 class="h1-responsive font-weight-bold text-white text-uppercase text-center">@PageData["Title"]</h2>
+
+                <div class="bc-icons">
+                    <ol class="breadcrumb p-0 m-0 justify-content-center" style="background: none;">
+
+                        @{
+                            var navLinks = (Dictionary<string, string>)PageData["NavLinks"];
+                            var count = 0;
+                            foreach (var navLink in navLinks)
+                            {
+                                count++;
+
+                                if (navLinks.Count != count)
+                                {
+                                    <li class="breadcrumb-item"><i class="fa fa-star-o mr-2 white-text" aria-hidden="true"></i><a class="white-text" href="@Href(navLink.Value)">@navLink.Key</a></li>
+                                }
+                                else
+                                {
+                                    <li class="breadcrumb-item fg-accent active"><i class="fa fa-star-o mx-2 white-text" aria-hidden="true"></i>@navLink.Key</li>
+                                }
+                            }
+                        }
+
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>

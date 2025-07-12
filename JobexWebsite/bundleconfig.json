@@ -1,0 +1,32 @@
+[
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendors/camera-slider/css/camera.min.css",
+    "inputFiles": [
+      "wwwroot/vendors/camera-slider/css/camera.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendors/camera-slider/scripts/jquery.easing.1.3.min.js",
+    "inputFiles": [
+      "wwwroot/vendors/camera-slider/scripts/jquery.easing.1.3.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/getsitecontrol.min.js",
+    "inputFiles": [
+      "wwwroot/js/getsitecontrol.js"
+    ]
+  }
+]

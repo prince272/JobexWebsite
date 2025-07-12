@@ -1,0 +1,61 @@
+﻿<section id="@PageData["CSSId"]" class="bg-theme-dark fg-theme-light" style="background: @PageData["CSSBackground"]; padding: 100px 0px 100px 0px;">
+    <!-- Container -->
+    <div class="container">
+
+        <div class="caption wow fadeInUp">
+            <!--Section Heading-->
+            <h2 class="h2-responsive font-weight-bold text-uppercase text-center pb-5">@PageData["Title"]</h2>
+        </div>
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-12">
+
+                <div id="mdb-lightbox-ui"></div>
+
+                <div class="mdb-lightbox no-margin row justify-content-center">
+                    @{
+                        var images = ((string[])Helpers.GetVirtualFiles(Helpers.Content.GalleryInfo.PhotoPath, "*" + Helpers.Content.GalleryInfo.PhotoExtension)).OrderBy(path => Path.GetFileNameWithoutExtension(path))
+                            .OrderBy(path => GetName(path), new StrCmpLogicalComparer());
+                        var filterImages = images.Where(path => Path.GetFileNameWithoutExtension(path).StartsWith(PageData["Filter"])).ToArray();
+
+
+                        foreach (var filterImage in filterImages)
+                        {
+                            <figure class="col-md-4 wow animated fadeInUp p-2">
+                                <a href="@Href(filterImage)"class="gallery-item" data-size="672x528">
+                                    <img src="@Href(filterImage)" class="gallery-image img-fluid">
+                                </a>
+                            </figure>
+                        }
+                    }
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@functions{ 
+    public class StrCmpLogicalComparer : Comparer<string>
+    {
+        [System.Runtime.InteropServices.DllImport("Shlwapi.dll", CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
+        private static extern int StrCmpLogicalW(string x, string y);
+
+        public override int Compare(string x, string y)
+        {
+            return StrCmpLogicalW(x, y);
+        }
+    }
+
+    public string GetName(string name)
+    {
+        name =  Path.GetFileNameWithoutExtension(name);
+        return name;
+    }
+}

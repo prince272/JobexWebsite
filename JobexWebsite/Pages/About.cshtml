@@ -1,0 +1,171 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "About";
+
+    var NavLinks = new Dictionary<string, string>();
+    NavLinks.Add("Home", "~/");
+    NavLinks.Add(Page.Title, "~/Pages/About");
+
+    //var count = 0;
+}
+
+@RenderPage("~/Shared/_HalfBannerPartial.cshtml", new { Title = "About Us", NavLinks = NavLinks })
+
+<section id="about" style="padding: 100px 0px 100px 0px;">
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Content -->
+        <div class="content">
+
+            <div class="caption wow fadeInUp">
+                <!--Section Heading-->
+                <h2 class="h2-responsive font-weight-bold text-uppercase text-center mb-3">@Helpers.Content.AboutInfo.Title</h2>
+                <hr class="mb-4 mt-0 bg-accent" style="width: 90px; height: 2px;">
+
+                <!-- Section Description -->
+                <p class="w-responsive text-center mx-auto mb-5">@Helpers.Content.AboutInfo.Description</p>
+            </div>
+
+            <!-- Grid Row -->
+            <div class="row mb-5">
+                <div class="col-md-6 pb-5 wow fadeInLeft">
+                    <img src="~/wwwroot/img/others/client1.jpg" class="img-fluid border shadow" height="450" width="450" />
+                </div>
+                <div class="col-md-6 wow fadeInRight">
+                    <h2 class="h2-responsive font-weight-bold text-uppercase">Who we are</h2>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto bg-accent" style="width: 90px; height: 2px;">
+                    <p>@Helpers.Content.Description</p>
+                    <p>@Helpers.Content.AboutInfo.Detail</p>
+                    <br />
+                    <a class="btn bg-accent btn-rounded" href="~/Pages/About">About Us</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+@*<section id="call" class="bg-accent fg-theme-light" style="padding: 100px 0px 100px 0px;">
+    <div class="container">
+        <div class="caption text-center">
+            <h2 class="h1-responsive font-weight-bold"><i class="fa fa-phone fa-2x" aria-hidden="true"></i> @Helpers.Content.Telephone.Line1</h2>
+            <p>We offer @Helpers.Content.Keywords. Call us for yours?</p>
+
+            <a class="btn btn-outline-light btn-rounded" href="tel:@Helpers.Content.Telephone.Line1">Call Us Now!</a>
+        </div>
+    </div>
+</section>*@
+
+@*<section id="team" class="grey lighten-4" style="padding: 100px 0px 100px 0px;">
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Content -->
+        <div class="text-center">
+
+            <div class="caption wow fadeInUp">
+                <!--Section Heading-->
+                <h2 class="h2-responsive font-weight-bold text-uppercase text-center mb-3">@Helpers.Content.TeamInfo.Title</h2>
+                <hr class="mb-4 mt-0 bg-accent" style="width: 90px; height: 2px;">
+
+                <!-- Section Description -->
+                <p class="w-responsive mx-auto mb-5">@Helpers.Content.TeamInfo.Description</p>
+            </div>
+
+            <!-- Grid row -->
+            <div class="row">
+                @{
+                    count = 0;
+                    var teamItems = Helpers.Content.TeamInfo.Items;
+                    foreach (var teamItem in teamItems)
+                    {
+                        count++;
+
+                        <!-- Grid column -->
+                        <div class="col-lg-4 col-md-12 @(count % 3 != 0 ? "mb-lg-0 mb-4" : "") wow zoomIn">
+
+                            <!-- Rotating card -->
+                            <div class="card-wrapper">
+                                <div id="card-@count.ToString()" class="card-rotating effect__click text-center w-100 h-100">
+                                    <!-- Front Side -->
+                                    <div class="face front white">
+                                        <!-- Image -->
+                                        <div class="card-up">
+                                            <img class="card-img-top" src="@teamItem.BackgroundUrl" alt="Team member card image">
+                                        </div>
+                                        <!-- Avatar -->
+                                        <div class="avatar mx-auto white">
+                                            <img src="@teamItem.ImageUrl" class="rounded-circle img-fluid" alt="First sample avatar image">
+                                        </div>
+                                        <!-- Content -->
+                                        <div class="card-body">
+                                            <h4 class="font-weight-bold mt-1 mb-3">@teamItem.Name</h4>
+                                            <p class="font-weight-bold fg-accent">@teamItem.Title</p>
+                                            <!-- Triggering button -->
+                                            <a class="rotate-btn dark-grey-text" data-card="card-@count.ToString()">
+                                                <i class="fa fa-repeat"></i> Click here to rotate
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Front Side -->
+                                    <!-- Back Side -->
+                                    <div class="face back white">
+                                        <!-- Content -->
+                                        <div class="card-body">
+                                            <!-- Content -->
+                                            <h4 class="font-weight-bold mt-4 mb-2">
+                                                <strong>About me</strong>
+                                            </h4>
+                                            <hr>
+                                            <p>
+                                                @teamItem.Description
+                                            </p>
+                                            <hr>
+                                            <!-- Social Icons -->
+                                            <ul class="list-inline list-unstyled">
+                                                <li class="list-inline-item">
+                                                    <a class="p-2 fa-lg green-ic" href="tel:@teamItem.Telephone">
+                                                        <i class="fa fa-phone"> </i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="p-2 fa-lg red-ic" href="mailto:@teamItem.EmailAddress">
+                                                        <i class="fa fa-envelope-o"> </i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="p-2 fa-lg fb-ic" href="@teamItem.FacebookLink">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="p-2 fa-lg ins-ic" href="@teamItem.InstagramLink">
+                                                        <i class="fa fa-instagram"> </i>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                            <!-- Triggering button -->
+                                            <a class="rotate-btn dark-grey-text" data-card="card-@count.ToString()">
+                                                <i class="fa fa-repeat"></i> Click here to rotate back
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Back Side -->
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                }
+            </div>
+            <!-- Grid row -->
+
+        </div>
+
+    </div>
+
+</section>*@

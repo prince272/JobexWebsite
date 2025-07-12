@@ -1,0 +1,138 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Contact";
+
+    var NavLinks = new Dictionary<string, string>();
+    NavLinks.Add("Home", "~/");
+    NavLinks.Add(Page.Title, "~/Pages/Contact");
+}
+
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@RenderPage("~/Shared/_HalfBannerPartial.cshtml", new { Title = "Contact Us", NavLinks = NavLinks })
+
+<iframe id="map-container" src="@Helpers.Content.WorkingLocation.EmbedMapSrc" frameborder="0" class="grey lighten-4" style="width: 100%; height: 500px; border:0" allowfullscreen></iframe>
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-section my-5">
+
+            <!-- Form with header -->
+            <div class="card">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-lg-8">
+
+                        <form action="mailto:@Helpers.Content.EmailAddress" method="post" enctype="text/plain" id="contact-form" class="card-body form">
+                            @AntiForgery.GetHtml()
+                            <!-- Header -->
+                            <h3 class="mt-4"><i class="fa fa-envelope pr-2"></i>Write to us:</h3>
+
+                            <!-- Grid row -->
+                            <div class="row">
+
+                                <!-- Grid column -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="form-contact-name" class="form-control" name="customerName" required>
+                                        <label for="form-contact-name" class="">Your name</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+                                <!-- Grid column -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="email" id="form-contact-email" class="form-control" name="customerEmail" required>
+                                        <label for="form-contact-email" class="">Your email</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row">
+
+                                <!-- Grid column -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="tel" id="form-contact-phone" class="form-control" name="customerTelephone" required>
+                                        <label for="form-contact-phone" class="">Your phone</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+                                <!-- Grid column -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="form-contact-company" class="form-control" name="customerCompany">
+                                        <label for="form-contact-company" class="">Your company</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row">
+
+                                <!-- Grid column -->
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <textarea type="text" id="form-contact-message" class="form-control md-textarea" rows="3" name="customerMessage"></textarea>
+                                        <label for="form-contact-message">Your message</label>
+                                        <a href="javascript:void(0)" onclick="document.getElementById('contact-form').submit()" class="btn-floating btn-lg blue">
+                                            <i class="fa fa-send-o"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+
+                            </div>
+                            <!-- Grid row -->
+
+                        </form>
+
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-lg-4">
+
+                        <div class="card-body bg-dark text-center h-100 white-text">
+
+                            <h3 class="my-4 pb-2">Contact information</h3>
+                            <ul class="text-lg-left list-unstyled ml-4">
+                                <li>
+                                    <p><a class="white-text" href="@Helpers.Content.WorkingLocation.Url" target="_blank"><i class="fa fa-globe pr-2"></i>@Helpers.Content.WorkingLocation.Name</a></p>
+                                </li>
+                                <li>
+                                    <p><a class="white-text" href="tel:@Helpers.Content.Telephone.Line1"><i class="fa fa-phone pr-2"></i>@Helpers.Content.Telephone.Line1</a></p>
+                                </li>
+                                <li>
+                                    <p><a class="white-text" href="tel:@Helpers.Content.Telephone.Line2"><i class="fa fa-phone pr-2"></i>@Helpers.Content.Telephone.Line2</a></p>
+                                </li>
+                                <li>
+                                    <p><a class="white-text" href="tel:@Helpers.Content.Telephone.Line3"><i class="fa fa-phone pr-2"></i>@Helpers.Content.Telephone.Line3</a></p>
+                                </li>
+                                <li>
+                                    <p><a class="white-text" href="tel:@Helpers.Content.Telephone.Line4"><i class="fa fa-phone pr-2"></i>@Helpers.Content.Telephone.Line4</a> (Mobile Money)</p>
+                                </li>
+                                <li>
+                                    <p><a class="white-text" href="mailto:@Helpers.Content.EmailAddress"><i class="fa fa-envelope pr-2"></i>@Helpers.Content.EmailAddress</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

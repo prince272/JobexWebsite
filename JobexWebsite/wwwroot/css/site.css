@@ -1,0 +1,195 @@
+::selection {
+    background-color: #1E9014;
+    color: #ffffff;
+}
+
+.bg-theme-dark {
+    background: #212121 !important;
+}
+.bg-theme-light {
+    background: #ffffff !important;
+}
+
+.fg-theme-dark {
+    color: #000000 !important;
+}
+.fg-theme-light {
+    color: #ffffff !important;
+}
+
+.bg-accent {
+    background: #1E9014 !important;
+}
+.fg-accent {
+    color: #1E9014 !important;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.icon-area .circle-icon i {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 1px 10px rgba(0,0,0,.46);
+}
+.icon-area .circle-icon {
+    display: inline-block;
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+.icon-area strong::after {
+    background: #343434;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    margin-left: -35px;
+    position: absolute;
+    width: 70px;
+}
+.icon-area strong {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+    /*font-family: 'Source Sans Pro',sans-serif;*/
+    font-weight: 700;
+}
+.icon-area p {
+    padding-top: 20px;
+}
+
+.heroslider .heroslider-inner .heroslider-content {
+    position: absolute;
+    bottom: 0%;
+    max-width: 800px;
+    min-height: 90px;
+    background: rgba(0, 0, 0, 0.71);
+    color: white;
+    border-top-right-radius: 10px;
+}
+
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/preloader.gif);
+}
+
+.bc-icons .breadcrumb-item + .breadcrumb-item::before {
+    content: none;
+}
+
+.section-shape {
+    position: relative;
+    clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw) );
+    /* change the calc height to a percentage height to get alternate responsive behavior*/
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+.vibrate-1 {
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+    animation: vibrate-1 0.3s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+@keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}

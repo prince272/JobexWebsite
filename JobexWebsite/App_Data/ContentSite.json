@@ -1,0 +1,204 @@
+{
+  "Title": "Jobex Ghana",
+  "Name": "Jobex Ghana",
+  "BusinessName": "Jobex Ghana",
+  "Author": "Prince Owusu",
+  "Description": "Jobex Company Limited (JCL) was set up by a team of professionals in the corporate world and is a limited liability firm focused on serving the comprehensive needs of individuals and businesses in the full range of the business cycle.",
+  "Type": "Website",
+  "Keywords": "Imports, Exports, Bus, Car Rentals, Camp Catering, Hospitality, Cleaning, Human Capital Development, Payroll Preparation",
+  "Telephone": {
+    "Line1": "+233 (055) 558 5512"
+  },
+  "EmailAddress": "jobexcompanyltd2009@yahoo.com",
+  "WorkingHours": {
+    "Monday": "8am - 6pm",
+    "Tuesday": "8am - 6pm",
+    "Wednesday": "8am - 6pm",
+    "Thursday": "8am - 6pm",
+    "Friday": "8am - 6pm",
+    "Saturday": "Closed",
+    "Sunday": "Closed",
+    "Regular": "Mon - Fri 8:00am - 6:00pm"
+  },
+  "WorkingLocation": {
+    "Name": "Yorkshire House, Augustus Brown Street, Hse # 100, NIC, Accra, Ghana",
+    "EmbedMapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30274981.046165086!2d-55.39969367569687!3d22.138310599896524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf998a20054b2b%3A0x144b8dcb9fbfbda6!2sJobex%20Company%20Limited!5e0!3m2!1sen!2sgh!4v1656894761527!5m2!1sen!2sgh",
+    "Url": "https://goo.gl/maps/Ue5vrhV2bAKV8zmh7"
+  },
+  "FacebookLink": "javascript:void(0)",
+  "TwitterLink": "javascript:void(0)",
+  "GooglePlusLink": "javascript:void(0)",
+  "InstagramLink": "javascript:void(0)",
+  "PinterestLink": "javascript:void(0)",
+  "LinkedinLink": "javascript:void(0)",
+  "FeatureInfo": {
+    "Items": [
+      {
+        "Symbol": "fa fa-paint-brush",
+        "Name": "Unique Services",
+        "Description": "We provides a range of unique services based on customer preferences."
+      },
+      {
+        "Symbol": "fa fa-check",
+        "Name": "We Deliver Quality",
+        "Description": "We deliver events and rental services making it easy for you to have a wonderful and memorable occasions."
+      },
+      {
+        "Symbol": "fa fa-clock-o",
+        "Name": "Always On Time",
+        "Description": "We show positivity to earn our customers trust which our customers deserve at appropriate timing interval."
+      },
+      {
+        "Symbol": "fa fa-thumbs-up",
+        "Name": "We Are Passionate",
+        "Description": "We believe in making your dreams a reality. Our talented and experienced staff have more experience in the event and planning."
+      }
+    ]
+  },
+  "StreakInfo": {
+    "Name": "Seth Godin",
+    "Quote": "There’s no shortage of remarkable ideas, what’s missing is the will to execute them."
+  },
+  "TestimonialInfo": {
+    "Title": "Our Testimonials",
+    "Description": "Our clients take time to acknowledge their satisfaction by providing excellent events and rental services with their testimonials.",
+    "Items": [
+      {
+        "ImageUrl": "",
+        "Name": "Amon Neequaye",
+        "Title": "",
+        "Comment": "As we are growing and the need for erentals services constantly arises we update our website to give our clients our newest touch to creativity.Jobex Vision Enterprise is the best option for all those problems.",
+        "Stars": 4
+      },
+      {
+        "ImageUrl": "",
+        "Name": "Baah-Agyei",
+        "Title": "",
+        "Comment": "Thank you so much for providing a wonderful, lovely event planning and rentals services to customers. I am thoroughly enjoying my wonderful experience.",
+        "Stars": 5
+      },
+      {
+        "ImageUrl": "",
+        "Name": "Prince",
+        "Title": "",
+        "Comment": "Jobex Events is the best event planning, catering services, accommodation & rentals services any company can ever imagine. Just send your request and it's done.",
+        "Stars": 5
+      }
+    ]
+  },
+  "TeamInfo": {
+    "Title": "Our amazing team",
+    "Description": "We are very proud of our dedicated, loyal, and hard-working staff. We think of ourselves as a family, and many on our staff have built workplace friendships that continue after hours.",
+    "Items": [
+      {
+        "BackgroundUrl": "https://mdbootstrap.com/img/Photos/Others/images/19.jpg",
+        "ImageUrl": "",
+        "Name": "Maria Kate",
+        "Title": "Photographer",
+        "Description": "onsectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat, dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?",
+        "EmailAddress": "",
+        "FacebookLink": "",
+        "Telephone": "",
+        "InstagramLink": ""
+      },
+      {
+        "BackgroundUrl": "https://mdbootstrap.com/img/Photos/Others/images/19.jpg",
+        "ImageUrl": "",
+        "Name": "Maria Kate",
+        "Title": "Photographer",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat, dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?",
+        "EmailAddress": "",
+        "FacebookLink": "",
+        "Telephone": "",
+        "InstagramLink": ""
+      },
+      {
+        "BackgroundUrl": "https://mdbootstrap.com/img/Photos/Others/images/19.jpg",
+        "ImageUrl": "",
+        "Name": "Maria Kate",
+        "Title": "Photographer",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat, dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?",
+        "EmailAddress": "",
+        "FacebookLink": "",
+        "Telephone": "",
+        "InstagramLink": ""
+      }
+    ]
+
+  },
+  "HerosliderInfo": {
+    "Items": [
+      {
+        "BackgroundUrl": "~/wwwroot/img/others/heroslides/slide1.jpg",
+        "Title": "Welcome to Jobex Ghana",
+        "Description": "Jobex Company Limited (JCL) was set up by a team of professionals in the corporate world and is a limited liability firm focused on serving the comprehensive needs of individuals and businesses in the full range of the business cycle."
+      },
+      {
+        "BackgroundUrl": "~/wwwroot/img/others/heroslides/slide2.jpg",
+        "Title": "Engineering Services",
+        "Description": "We undertake complete installation services for Emergency Lighting Power Systems, Fire, Security, CCTV, Access Control Systems, Electric Fencing, Computers, Telecommunication Networking and Electricals."
+      },
+      {
+        "BackgroundUrl": "~/wwwroot/img/others/heroslides/slide3.jpg",
+        "Title": "Procurement and Supply",
+        "Description": "We undertake supply of quality items such as electronic equipments, stationery, water tanks, various plastic products, hampers and general goods as per client requests and in an effective and timely manner."
+      },
+      {
+        "BackgroundUrl": "~/wwwroot/img/others/heroslides/slide4.jpg",
+        "Title": "Business Plan Development",
+        "Description": "We have externally focused business plans, which are plans targeting goals that are important to external stakeholders, particularly financial stakeholders (Banks, Investors and other local and international financial institutions)."
+      },
+      {
+        "BackgroundUrl": "~/wwwroot/img/others/heroslides/slide5.jpg",
+        "Title": "Filing of Statutory Returns",
+        "Description": "We prepare and file returns on behalf of our clientele in a timely manner e.gs of such statutory returns are: Income Tax, Social Security and National Insurance Trust, Withholding tax and Value Added Tax returns. "
+      }
+    ]
+  },
+  "AboutInfo": {
+    "Title": "About Us",
+    "Description": "We have a great story on how our products and services were built to change lives.",
+    "Detail": "Jobex Company Limited (JCL) is emerging as one of Ghana's leading supplier in the Mining industry with over 10 years unparalleled mining experience. It is a limited liability firm focused on serving the comprehensive needs of various sectors and providing comprehensive technical advisory and product information to the mining and other industry in the full range of the business cycle. \r\n\r\nJCL offers a more balanced quality service than most of its competitors leveraging on a good international exposure, cross cultural experience with multinational companies and industry knowledge.\r\nJCL has always been value driven with set up of experience, skilled and experts who specializes in specific disciplines, including Supply Chain, finance, management, operations, sales and marketing, civil engineering & construction, technology, and human resources.\r\n\r\nThe company has its corporate office in Accra, Ghana in West Africa and was incorporated on the 24th of April, 2009.",
+    "AdditionalDetail":  ""
+  },
+  "GalleryInfo": {
+    "Title": "Our Gallery",
+    "Description": "See more of our full-service events and rentals firm.",
+    "PhotoPath": "~/wwwroot/img/others/gallery",
+    "PhotoExtension": ".jpg"
+  },
+  "FactorInfo": {
+    "Title": "Our Many Services That Fits Your Needs",
+    "Description": "Here are our services. Feel free to choose any of them and give us a call. We're always ready to answer you.",
+    "ClientImageUrl": "~/wwwroot/img/others/client2.png",
+    "Items": [
+      {
+        "Symbol": "fa fa-check",
+        "Name": "Imports and Exports",
+        "Description": "We aspire to grow our business by recognizing and adapting to market changes and customer demands and to being one of the major players in the Imports and Exports sector by importing various kinds of electronic equipment, household items, hard ware and general goods.  Items needed would be ordered and delivered in a timely manner as agreed."
+      },
+      {
+        "Symbol": "fa fa-check",
+        "Name": "Bus and Car Rentals",
+        "Description": "We provide solutions to your temporary transportation needs by using very modern vehicles with professional drivers who have the experience in traveling across the country to satisfy the peculiar needs of both our prospective and existing clients. "
+      },
+      {
+        "Symbol": "fa fa-check",
+        "Name": "Camp Catering, Hospitality and Cleaning",
+        "Description": "We have experts in camp management services including catering, hospitality and maintenance management. We engage in ‘meet and greet’ services for our clients which save them time and we do commercial cleaning services for offices, workshops, factories, households etc.  In today’s highly competitive global environment, our personnel have been carefully screened, selected and trained to render quality service."
+      },
+      {
+        "Symbol": "fa fa-check",
+        "Name": "Accommodation Services",
+        "Description": "Accommodation service managers plan, organize, direct, control and evaluate the operations of an accommodation establishment or of a department. So at Jobex Events, we make your safety our #1 Priority!"
+      }
+    ]
+  },
+  "ErrorInfo": {
+    "Error404": {
+      "Title": "How did you get here? Sorry, this page could not be found.",
+      "Description": "The page you are looking for doesn't exist, no longer exists or has been moved."
+    }
+  },
+  "AddressbarColor": "#d8455d"
+}

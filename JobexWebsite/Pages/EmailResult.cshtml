@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Mailing Message";
+
+    var customerName = Request["customerName"];
+    var customerEmail = Request["customerEmail"];
+    var customerTelephone = Request["customerTelephone"];
+    var customerCompany = Request["customerCompany"];
+    var customerMessage = Request["customerMessage"];
+    var errorMessage = "";
+    var debuggingFlag = false;
+    try
+    {
+        System.Text.StringBuilder builder = new System.Text.StringBuilder();
+        builder.Append($"<p><b>Customer's Name:</b> {customerName}</p>");
+        builder.Append($"<p><b>Customer's Email:</b> {customerEmail}</p>");
+        builder.Append($"<p><b>Customer's No:</b> {customerTelephone}</p>");
+        builder.Append($"<p><b>Customer's Company:</b> {customerCompany}</p>");
+        builder.Append($"<p><b>Customer's Message:</b></p>");
+        builder.Append($"<p>{customerMessage}</p>");
+
+        // Send email
+        WebMail.Send(to: customerEmail, subject: "Message from - " + customerName, body: builder.ToString(), isBodyHtml: true);
+    }
+    catch (Exception ex)
+    {
+        errorMessage = ex.Message;
+    }
+}
+
+<section class="view" style="background: url('@Href("~/wwwroot/img/others/banner.jpg")') center; height: 600px;">
+    <div class="mask flex-center rgba-black-strong">
+        <div class="flex-center flex-column text-white text-center">
+            <div class="caption wow animated fadeIn">
+                <h1 class="mb-4 font-weight-bold">Sorry to hear that you are having trouble.</h1>
+                @if (errorMessage == "")
+                {
+                    <p>
+                        An email message has been sent to our customer service
+                        department. Thank You!
+                    </p>
+                }
+                else
+                {
+                    <h5 class="mb-3"><b>The email was <em>not</em> sent.</b></h5>
+                    <p>Try sending from <a href="mailto:@Helpers.Content.EmailAddress" class="blue-text">@Helpers.Content.EmailAddress</a></p>
+                    if (debuggingFlag)
+                    {
+                        <p>The following error was reported:</p>
+                        <p><em>@errorMessage</em></p>
+                    }
+                }
+                <a href="~/" class="blue-text">Go back to home page.</a>
+            </div>
+        </div>
+    </div>
+</section>

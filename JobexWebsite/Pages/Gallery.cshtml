@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Gallery";
+
+    var NavLinks = new Dictionary<string, string>();
+    NavLinks.Add("Home", "~/");
+    NavLinks.Add(Page.Title, "~/Pages/Gallery");
+}
+
+@RenderPage("~/Shared/_HalfBannerPartial.cshtml", new { Title = "Our Gallery", NavLinks = NavLinks })
+
+@RenderPage("~/Shared/_GalleryPartial.cshtml", new { CSSId = "slides",  Title = "Our Gallery", Filter = "slide" })

@@ -1,0 +1,22 @@
+﻿    <!-- Heroslider -->
+<div class="heroslider">
+
+    <!-- Heroslider Inner -->
+    <div class="heroslider-inner">
+        @{
+            var herosliderItems = Helpers.Content.HerosliderInfo.Items;
+            foreach (var herosliderItem in herosliderItems)
+            {
+                <!-- Slide Item -->
+                <div class="heroslider-item" data-src="@Href(herosliderItem.BackgroundUrl)">
+                    <div class="heroslider-content wow fadeInUp animated">
+                        <div class="container">
+                            <h3 class="wow fadeInUp animated display-4 h1-responsive pt-3 font-weight-bold text-uppercase fg-accent">@herosliderItem.Title</h3>
+                            <p class="wow fadeInUp animated">@herosliderItem.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

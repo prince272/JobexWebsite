@@ -1,0 +1,115 @@
+﻿@{
+
+    var count = 0;
+}
+<section id="factors" class="my-5" style="padding: 50px 0px 50px 0px;">
+
+    <div class="container">
+
+        <div class="caption wow fadeInUp">
+            <!--Section Heading-->
+            <h2 class="h2-responsive font-weight-bold text-uppercase text-center mb-3">@Helpers.Content.FactorInfo.Title</h2>
+            <hr class="mb-4 mt-0 bg-accent" style="width: 90px; height: 2px;">
+
+            <!-- Section Description -->
+            <p class="w-responsive text-center mx-auto mb-5">@Helpers.Content.FactorInfo.Description</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 wow fadeInRight">
+                <h2 class="h2-responsive font-weight-bold text-uppercase">CHEMICAL/REAGENT SUPPLIES </h2>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto bg-accent" style="width: 90px; height: 2px;">
+                <p>
+                    Over the years JCL has been a leading chemical supplier to some mining companies in Ghana. JCI has been the link between the chemical manufacturers and users. The company support its customers and suppliers with the needed solutions for industrial and specialized chemicals.
+
+                    Jobex has provided efficient chemical supplies to mining companies such as Goldfields Ghana Ltd, Newmont Ghana Gold Ltd, Golden Star Resources, Newmont Akyem Mines, Asanko Mining Ltd,etc.
+
+                    Jobex Company Ltd supplies wide range of chemicals such as Sodiurn Hydroxide, Hydrochloric Acid
+                    Hydrogen Peroxide, Sulphamic Acid, Sodium Nitrite, Calcium Hydrochlorite, Soda Ash, activated carbon,  steel balls/grinding media.
+
+                    Jobex Company Ltd has a team of experts that handles steels balls, mill
+                    maintenance and other processing products.
+
+                    Jobex Company Ltd is involved with a top Manufacturer/Supplier of Grinding Media in China which has a very impressive production capacity, quality control. management, financial capacity.  We have satisfied ourselves that the supplier is of good repute and well established.
+
+                    The manufacturers have achieved ISO accreditation and are very experienced. The manufacturing company has the capacity of producing top quality of forged/hot rolled steel balls and grinding rod with the highest quality of raw material, advanced production equiprnent and comprehensive testing equipment, ISO,SGS,BV certificated.
+                </p>
+                <br />
+            </div>
+            <div class="col-md-6 pb-5 wow fadeInLeft">
+                <img src="~/wwwroot/img/others/slide23.jpg" class="img-fluid border shadow" height="450" width="450" />
+            </div>
+        </div>
+
+        <!-- Grid Row -->
+        <div class="row mb-5 justify-content-center">
+            @{
+                int position = 0;
+                var factorGroups = ((dynamic[])Helpers.Content.FactorInfo.Items).Select((value, index) => new { PairNum = index / 1, value }).GroupBy(pair => pair.PairNum).Select(grp => grp.Select(g => g.value));
+                foreach (var factorGroup in factorGroups)
+                {
+                    position++;
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-5">
+
+                        @{
+                            count = 0;
+                            foreach (var factorItem in factorGroup)
+                            {
+                                count++;
+
+                                <!-- Grid row -->
+                                <div class="row mb-3 @(count == factorGroup.Count() ? "mb-md-0" : "") wow animated fadeInUp">
+
+                                    <!-- Grid column -->
+                                    <div class="col-2">
+                                        <i class="@factorItem.Symbol fa-2x fg-accent"></i>
+                                    </div>
+                                    <!-- Grid column -->
+                                    <!-- Grid column -->
+                                    <div class="col-10">
+                                        <h5 class="font-weight-bold mb-3">@factorItem.Name</h5>
+                                        <p class="grey-text">@factorItem.Description</p>
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                            }
+                        }
+
+                    </div>
+                }
+            }
+        </div>
+        <div class="caption wow fadeInUp">
+            <!--Section Heading-->
+            <h2 class="h2-responsive font-weight-bold text-uppercase text-center mb-3">Cerificate of Recognition</h2>
+            <hr class="mb-4 mt-0 bg-accent" style="width: 90px; height: 2px;">
+
+            <!-- Section Description -->
+            <p class="w-responsive text-center mx-auto mb-5">This acknowledgment award recognizes us as a company.</p>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12 wow fadeInLeft">
+                <img src="~/wwwroot/img/others/gallery/slide32.jpg" class="img-fluid border shadow" />
+            </div>
+        </div>
+
+
+        <div class="caption wow fadeInUp">
+            <!--Section Heading-->
+            <h2 class="h2-responsive font-weight-bold text-uppercase text-center mb-3">Our Award Certificate</h2>
+            <hr class="mb-4 mt-0 bg-accent" style="width: 90px; height: 2px;">
+
+            <!-- Section Description -->
+            <p class="w-responsive text-center mx-auto mb-5">This acknowledgment award recognizes us as a company.</p>
+        </div>
+        <div class="row">
+            <div class="col-12 wow fadeInLeft">
+                <img src="~/wwwroot/img/others/gallery/slide28.jpg" class="img-fluid border shadow" />
+            </div>
+        </div>
+    </div>
+
+</section>
